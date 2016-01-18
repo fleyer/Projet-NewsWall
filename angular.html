@@ -1,0 +1,106 @@
+						<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+			<html xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
+			<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+			<title>Les Recettes des bieres</title>
+			<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+			<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.1/angular.min.js"></script>
+			<style>
+				html { width:100%;height:100%;}
+			</style>
+			<script type="text/javascript">
+var module = angular.module('app', []);
+
+module.config(function() {
+});
+
+module.controller('indexController', function($scope) {
+  
+  $scope.selected = 'Lea';
+  $scope.isShown = function(biere) {
+    if ($scope.selected == 'all') {
+      return true;
+    }
+    return $scope.selected == biere;
+  }
+  
+});
+				
+			</script>
+			</head>
+			<body ng-controller="indexController">
+			  Selectionnez un biere =) :<select ng-model="selected">
+			   <option value="Romain">Romain</option>
+			   <option value="Lea">Lea</option>
+			  </select>
+			<div ng-show="isShown('Romain')">
+			<h1>Blonde Romain</h1>
+		    	<ul><h2>Empatage</h2>
+		    	<li id="1" class="biere">
+		    		Chauffer pendant 10 min a 10 degres
+		    	</li>
+		    	<li id="1" class="biere">
+		    		Ajouter 10g de houblon 
+		    	</li>
+		    	<li id="1" class="biere">
+		    		Brasser pendant 10
+		    	</li>
+		    	<li id="1" class="biere">
+		    		Transvaser la preparation dans un/une bouteille
+		    	</li>
+		    		
+		    	<h2>Fermentation</h2>
+		    	<li id="1" class="biere">
+		    		Chauffer pendant 10 min a 10 degres
+		    	</li>
+		    	<li id="1" class="biere">
+		    		Ajouter 10g de houblon 
+		    	</li>
+		    	<li id="1" class="biere">
+		    		Brasser pendant 10
+		    	</li>
+		    	<li id="1" class="biere">
+		    		Transvaser la preparation dans un/une bouteille
+		    	</li>
+		    	<li id="1" class="biere">
+		    		Brasser pendant 10
+		    	</li>
+		    		
+		    	</ul>
+		    	</div>
+			<div ng-show="isShown('Lea')">
+			<h1>Blonde Lea</h1>
+		    	<ul><h2>Empatage</h2>
+		    	<li id="1" class="biere">
+		    		Chauffer pendant 10 min a 10 degres
+		    	</li>
+		    	<li id="1" class="biere">
+		    		Ajouter 10g de houblon 
+		    	</li>
+		    	<li id="1" class="biere">
+		    		Brasser pendant 10
+		    	</li>
+		    	<li id="1" class="biere">
+		    		Transvaser la preparation dans un/une bouteille
+		    	</li>
+		    		
+		    	<h2>Fermentation</h2>
+		    	<li id="1" class="biere">
+		    		Chauffer pendant 10 min a 10 degres
+		    	</li>
+		    	<li id="1" class="biere">
+		    		Ajouter 10g de houblon 
+		    	</li>
+		    	<li id="1" class="biere">
+		    		Brasser pendant 10
+		    	</li>
+		    	<li id="1" class="biere">
+		    		Transvaser la preparation dans un/une bouteille
+		    	</li>
+		    		
+		    	</ul>
+		    	</div>
+	    	
+	    	</body>
+			</html>
+	    	
