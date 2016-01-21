@@ -19,6 +19,7 @@
 		    function toggler(divId) {
 		    	$(".panel-body p").hide();
 		        $("p#" + divId).show();
+		        $(".panel-heading h4").text($("h1#" + divId).text());
 		    }
     	</script> 
 	</head>
