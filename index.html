@@ -4,17 +4,22 @@
 <html ng-app>
 	<head>
         <title>NewsWall | Home</title>
-        <meta charset="utf-8">
+        <meta charset="utf-8"></meta>
 	    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
 	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<script src="jquery-2.2.0.min.js"></script> 
-    	<script> 
+    	<script type="text/javascript"> 
 		    $(function(){
 		      $("#includedGauche").load("ComposantGauche.html");
-		      $("#includedDroit").load("ComposantDroit.html");		      
+		      $("#includedDroit").load("ComposantDroit.html");     
 		    });
+		    
+		    function toggler(divId) {
+		    	$(".panel-body p").hide();
+		        $("p#" + divId).show();
+		    }
     	</script> 
 	</head>
 	<body>
@@ -24,10 +29,10 @@
     		</div>
 	    </div>
 	    <div class="panel panel-default" class="container-fluid">
-	    	<div class="row">
+	    	<div class="row" style="padding: 25px;">
 	  			<div class="col-md-4" id="includedGauche"></div>
 	  			<div class="col-md-8 " id="includedDroit"></div>
-	   		</div>
+	  		</div>
 		</div>
 	</body>
 </html>
